@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day-03 - crossed wires", "d
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day-04 - valid passwords", "day-04\day-04 - valid passwords.csproj", "{09599937-0EB7-408A-9D8D-0B67623A6EBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day-05", "day-05\day-05.csproj", "{F102C5B1-6510-4392-92D1-9BAA36946817}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day-05 - intcode computer II", "day-05\day-05 - intcode computer II.csproj", "{F102C5B1-6510-4392-92D1-9BAA36946817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day-06", "day-06\day-06.csproj", "{ADBD451A-50AE-4CC3-8DCC-E97E6BA80757}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F102C5B1-6510-4392-92D1-9BAA36946817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F102C5B1-6510-4392-92D1-9BAA36946817}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F102C5B1-6510-4392-92D1-9BAA36946817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADBD451A-50AE-4CC3-8DCC-E97E6BA80757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBD451A-50AE-4CC3-8DCC-E97E6BA80757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBD451A-50AE-4CC3-8DCC-E97E6BA80757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBD451A-50AE-4CC3-8DCC-E97E6BA80757}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
