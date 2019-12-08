@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace day_06
 {
@@ -28,7 +29,7 @@ namespace day_06
       var lookup = new Dictionary<string, SpaceObject>();
 
       var input = File.ReadAllLines("input.txt");
-      //input = "COM)B\nB)C\nC)D\nD)E\nE)F\nB)G\nG)H\nD)I\nE)J\nJ)K\nK)L".Split('\n');
+     // input = "COM)B\nB)C\nC)D\nD)E\nE)F\nB)G\nG)H\nD)I\nE)J\nJ)K\nK)L\nK)YOU\nI)SAN".Split('\n');
 
       foreach (var line in input)
       {
@@ -55,19 +56,26 @@ namespace day_06
         satellite.Parent = parent;
       }
 
-      int count = 0;
-      foreach (var obj in lookup.Values)
-      {
-        SpaceObject o = obj;
-        while (o.Parent != null)
-        {
-          count++;
-          o = o.Parent;
-        }
-      }
+      List<string> myPath = getPath(lookup, "YOU");
+      List<string> santaPath = getPath(lookup, "SAN");
 
-      Console.WriteLine(count);
+      int start = 0;
+      while (myPath[start] == santaPath[start]) start++;
+
+      int hops = myPath.Count + santaPath.Count - (2 * start);
+      Console.WriteLine(hops);
     }
 
+    static List<string> getPath(Dictionary<string, SpaceObject> orbits, string satelliteId)
+    {
+      List<string> list = new List<string>();
+      SpaceObject s = orbits[satelliteId];
+      while (s.Parent != null)
+      {
+        list.Insert(0, s.Parent.Id);
+        s = s.Parent;
+      }
+      return list;
+    }
   }
 }
